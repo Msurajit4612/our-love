@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Forever ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+h1{
+font-size:50px;
+margin-top:20px;
+animation:glow 2s infinite alternate;
+}
+
+#final{
+font-size:32px;
+color:yellow;
+margin-top:30px;
+font-weight:bold;
+}
+
+.message{
+font-size:22px;
+line-height:1.8;
+margin-top:30px;
+}
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 10px white;
+}
+
+to{
+text-shadow:0 0 30px red,
+0 0 60px hotpink;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container fade">
+
+<div class="card">
+
+<h1>❤️ FOREVER ❤️</h1>
+
+<p class="message">
+
+From the moment you came into my life...
+
+Everything became beautiful.
+
+<br><br>
+
+I don't promise a perfect life...
+
+But I promise I'll never stop loving you.
+
+<br><br>
+
+No matter where life takes us...
+
+I'll always hold your hand.
+
+<br><br>
+
+Thank you for being the most beautiful part of my life.
+
+❤️
+
+</p>
+
+<br>
+
+<button onclick="showLove()">
+
+❤️ Click Here ❤️
+
+</button>
+
+<h2 id="final"></h2>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+function showLove(){
+
+document.getElementById("final").innerHTML=
+
+"❤️ I LOVE YOU FOREVER ❤️<br><br>💍 Will Always Be Yours 💍";
+
+createConfetti();
+
+}
+
+</script>
+
+</body>
+
+</html>
