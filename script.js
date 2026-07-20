@@ -92,7 +92,7 @@ function showDays(){
 
     if(!box) return;
 
-    const start = new Date(2026, 4, 29); // 29 July 2026
+    const start = new Date(2026, 3, 29); // 29 July 2026
 
     const today = new Date();
 
