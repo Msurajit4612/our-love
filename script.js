@@ -26,36 +26,41 @@ function typeLetter() {
 // ---------------- Love Reasons ----------------
 
 const reasons = [
-
 "❤️ Your smile makes my day.",
-
 "❤️ You are my happiness.",
-
 "❤️ You understand me better than anyone.",
-
 "❤️ You always support me.",
-
 "❤️ You are beautiful inside and out.",
-
 "❤️ You make my life complete.",
-
 "❤️ I feel lucky to have you.",
-
 "❤️ You are my future wife.",
-
 "❤️ I love everything about you."
-
 ];
+
+let remainingReasons = [...reasons];
 
 function showReason(){
 
-    const box=document.getElementById("reason");
+    const box = document.getElementById("reason");
+    const nextBtn = document.getElementById("nextBtn");
 
-    if(!box) return;
+    if(remainingReasons.length > 0){
 
-    box.innerHTML=
+        const randomIndex = Math.floor(Math.random() * remainingReasons.length);
 
-    reasons[Math.floor(Math.random()*reasons.length)];
+        box.innerHTML = remainingReasons[randomIndex];
+
+        // Remove the shown reason so it won't repeat
+        remainingReasons.splice(randomIndex, 1);
+
+    }
+
+    // Show Next button after all reasons are completed
+    if(remainingReasons.length === 0){
+
+        nextBtn.style.display = "inline-block";
+
+    }
 
 }
 
