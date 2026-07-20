@@ -89,20 +89,20 @@ function answer(){
 function showDays(){
 
     const box = document.getElementById("days");
-
     if(!box) return;
 
-    const start = new Date("2026-04-29"); // 29 July 2026
-
+    const start = new Date(2026, 3, 29); // 29 April 2026
     const today = new Date();
 
-    let diff = Math.floor((today - start) / (1000 * 60 * 60 * 24));
+    start.setHours(0,0,0,0);
+    today.setHours(0,0,0,0);
 
-    if(diff < 0){
-        diff = 0;
-    }
+    let diff = Math.floor((today - start) / (1000*60*60*24));
 
-    box.innerHTML = diff + " Days ❤️";
+    document.getElementById("days").innerHTML =
+        diff + " Days ❤️<br><br>" +
+        "Today: " + today.toDateString() + "<br>" +
+        "Start: " + start.toDateString();
 }
 
 // ---------------- Hearts ----------------
