@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Will You Marry Me? ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+overflow:hidden;
+}
+
+.buttons{
+position:relative;
+height:180px;
+margin-top:40px;
+}
+
+#yesBtn,#noBtn{
+position:absolute;
+padding:15px 35px;
+font-size:22px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+transition:.4s;
+}
+
+#yesBtn{
+left:30%;
+background:#fff;
+color:#ff4081;
+}
+
+#noBtn{
+left:60%;
+background:#ff1744;
+color:white;
+}
+
+#message{
+margin-top:200px;
+font-size:28px;
+color:yellow;
+font-weight:bold;
+min-height:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>💍 Will You Marry Me? 💍</h1>
+
+<p>
+
+I want to spend my whole life with you...
+
+Will you be my forever?
+
+❤️
+
+</p>
+
+<div class="buttons">
+
+<button id="yesBtn" onclick="yesAnswer()">
+
+YES ❤️
+
+</button>
+
+<button id="noBtn" onclick="noAnswer()">
+
+NO 😒
+
+</button>
+
+</div>
+
+<h2 id="message"></h2>
+
+</div>
+
+</div>
+
+<script>
+
+let count=0;
+
+function noAnswer(){
+
+count++;
+
+let no=document.getElementById("noBtn");
+
+if(count<=4){
+
+let x=Math.random()*220+20;
+
+let y=Math.random()*100+20;
+
+no.style.left=x+"px";
+
+no.style.top=y+"px";
+
+}
+
+else{
+
+no.style.display="none";
+
+document.getElementById("message").innerHTML=
+
+"🥺 Ab to maan jao babu... ❤️<br> Aur kitna rulayogi? 💕";
+
+}
+
+}
+
+function yesAnswer(){
+
+window.location.href="forever.html";
+
+}
+
+</script>
+
+</body>
+</html>
