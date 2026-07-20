@@ -88,36 +88,21 @@ function answer(){
 
 function showDays(){
 
-    const box=document.getElementById("days");
+    const box = document.getElementById("days");
 
     if(!box) return;
 
-    const start=new Date("2026-04-29");
+    const start = new Date(2026, 4, 29); // 29 July 2026
 
-    const today=new Date();
+    const today = new Date();
 
-    const diff=Math.floor(
+    let diff = Math.floor((today - start) / (1000 * 60 * 60 * 24));
 
-    (today-start)/(1000*60*60*24)
+    if(diff < 0){
+        diff = 0;
+    }
 
-    );
-
-    box.innerHTML=diff+" Days ❤️";
-
-}
-
-// ---------------- Final Message ----------------
-
-function finalMessage(){
-
-    const box=document.getElementById("final");
-
-    if(box)
-
-    box.innerHTML="❤️ I LOVE YOU FOREVER ❤️";
-
-    createConfetti();
-
+    box.innerHTML = diff + " Days ❤️";
 }
 
 // ---------------- Hearts ----------------
